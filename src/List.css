@@ -1,0 +1,92 @@
+.grocery-list{
+    /* border: 1px solid red; */
+    width: 70%;
+    padding: 10px;
+    padding-top: 50px;
+    margin-left:15%;
+    border:2px solid brown;
+    border-radius: 10px;
+    /* width: 400px; */
+}
+.btn-container{
+    display: flex;
+    margin-right: 78px;
+    flex-wrap: nowrap;
+
+}
+.article{
+    display: flex;
+    height:225px;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border:1px solid black;
+    padding-top:20px;
+    width:80%;
+    margin-left:10%;
+    text-align: left;
+    background-color:#fefefe;
+    border-radius: 15px;
+}
+.normal{
+    font-weight: normal;
+}
+.edit{
+    color: green;
+    position: relative;
+    top:-80px;
+    right:-125px;
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right:5px;
+    z-index: 0;
+}
+.delete{
+    position: relative;
+    top:-80px;
+    right:-135px;
+    font-size: 2em;
+    color:red;
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+}
+.delete:active ,.edit:active,.like:active,.dislike:active{
+    transform: perspective(100px) translateZ(-20px);
+  }
+  
+.like{
+    color: green;
+    position: relative;
+    left:-235px;
+    bottom:-65px;
+    font-size: 2em;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+}
+.dislike{
+    color:red;
+    position: relative;
+    left:-225px;
+    bottom:-65px;
+    font-size:2em;
+    margin-left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.text{
+    margin-left:10%;
+    margin-top:0;
+    color:#063970;
+    font-size:20px;
+    font-weight:500;
+}
