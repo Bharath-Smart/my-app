@@ -10,6 +10,11 @@ const Signin = () => {
 
     const [auth,setAuth] = useState(false);
 
+    if(auth)
+    {
+        return <Redirect to = "/" />
+    }
+
     const changeHandler = e => {
         setData({...data,[e.target.name]:e.target.value})
     }
@@ -32,11 +37,6 @@ const Signin = () => {
             setAuth(true);
             alert("Signed-In successfully!!!")
         }
-    }
-
-    if(auth)
-    {
-        return <Redirect to = "/" />
     }
     
     return (
