@@ -45,7 +45,7 @@ const Signin = () => {
             <form onSubmit={submitHandler} >
             <input type="email" placeholder="Enter Email" name="email" value={email} onChange={changeHandler} /> <br />
             <input type="password" placeholder="Enter password" name="password" value={password} onChange={changeHandler} /> <br />
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" onClick={() => setAuth(true)}/>
             </form>
         </div>
     )
