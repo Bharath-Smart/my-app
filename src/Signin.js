@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import {Redirect} from 'react-router'
 
 const Signin = () => {
     const [data,setData] = useState({
@@ -6,6 +7,8 @@ const Signin = () => {
         password : '',
     })
     const {email,password} = data;
+
+    const [auth,setAuth] = useState(false);
 
     const changeHandler = e => {
         setData({...data,[e.target.name]:e.target.value})
@@ -26,10 +29,15 @@ const Signin = () => {
         }
         else {
             console.log(data);
+            setAuth(true);
             alert("Signed-In successfully!!!")
         }
     }
 
+    if(auth)
+    {
+        return <Redirect to = "/" />
+    }
     
     return (
         <div id="signin">
